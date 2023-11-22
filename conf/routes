@@ -1,0 +1,45 @@
+#+ nocsrf
+#POST        /follow                      controllers.Controller.follow
+#+ nocsrf
+#GET        /result/:id                   controllers.Controller.result(id: String)
+#+ nocsrf
+#GET        /return/:mine/:address        controllers.Controller.returnTx(mine: String, address: String)
+#+ nocsrf
+GET        /stop/:apiKey                 controllers.Controller.stop(apiKey: String)
++ nocsrf
+GET        /start/:apiKey                controllers.Controller.start(apiKey: String)
++ nocsrf
+GET        /ignoreTime/:apiKey           controllers.Controller.ignoreTime(apiKey: String)
++ nocsrf
+GET        /considerTime/:apiKey         controllers.Controller.considerTime(apiKey: String)
++ nocsrf
+GET        /state                        controllers.Controller.state()
++ nocsrf
+GET        /info                        controllers.Controller.info()
++ nocsrf
+GET        /spend/:dex/:box/:fee                        controllers.Controller.spend(dex: String, box: String, fee:Long)
++ nocsrf
+GET        /willGet/:dex/:box/:fee                        controllers.Controller.willGet(dex: String, box: String, fee:Long)
+#+ nocsrf
+#GET        /encodedBox/:bytes            controllers.Controller.encodedBox(bytes: String)
+#+ nocsrf
+#GET        /returnAddr/:tree             controllers.Controller.returnAddr(tree: String)
+#+ nocsrf
+#POST        /compile                     controllers.Controller.compile
++ nocsrf
+GET        /assets/*file                 controllers.Assets.versioned(path="/public", file: Asset)
+#+ nocsrf
+#GET        /wallet                      controllers.Controller.walletAddress
+#+ nocsrf
+#GET        /getScanAddress/:address            controllers.Controller.getScanAddress(address: String)
+#
+#+ nocsrf
+#GET        /getBankBox            controllers.Controller.getBankBox()
+#+ nocsrf
+#GET        /getOracleBox            controllers.Controller.getOracleBox()
+
++ nocsrf
+GET        /getHeight            controllers.Controller.getHeight()
+
+#+ nocsrf
+#POST        /broadcast                     controllers.Controller.broadcast
