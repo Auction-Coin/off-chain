@@ -214,7 +214,7 @@ class Jobs(nodeService: NodeService) extends Actor with ActorLogging {
     case JobsUtil.startAuction =>
       try {
 //        println("Starting auction")
-//        handleAuctions()
+        handleAuctions()
       } catch {
         case e: Throwable =>
           logger.error("Error while handling auctions " + e.getMessage)
