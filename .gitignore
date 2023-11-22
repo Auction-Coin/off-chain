@@ -17,5 +17,4 @@ data
 db*
 .metals/
 .vscode/
-project/
 conf/application.conf
